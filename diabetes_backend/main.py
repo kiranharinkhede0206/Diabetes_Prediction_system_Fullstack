@@ -23,7 +23,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
     "http://localhost:5173",
-    "https://diabetes-prediction-system-fullstac-smoky.vercel.app"
+    "https://diabetes-prediction-system-fullstac-smoky.vercel.app",
+    "https://diabetes-prediction-system-fullstack-1qaa-225dbum56.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
