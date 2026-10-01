@@ -6,11 +6,11 @@ An end-to-end machine learning web application that predicts diabetes risk based
 
 ## Live Demo
 
-[View Live Application](YOUR_LIVE_FRONTEND_URL)
+https://diabetes-prediction-system-fullstack-1qaa-225dbum56.vercel.app/
 
 ## Repository
 
-[View Source Code](YOUR_GITHUB_REPOSITORY_URL)
+https://github.com/kiranharinkhede0206/Diabetes_Prediction_system_Fullstack
 
 ## Overview
 
@@ -83,11 +83,12 @@ User enters clinical parameters
               │
               ▼
       Prediction History
-System Architecture
+
+## System Architecture
 
 The application follows a layered architecture consisting of four main components:
 
-Frontend Layer
+## Frontend Layer
 
 The frontend is responsible for providing the user-facing assessment interface.
 
@@ -107,7 +108,8 @@ React
 TypeScript
 Vite
 Tailwind CSS
-Backend Layer
+
+##Backend Layer
 
 The backend provides the REST API and acts as the communication layer between the frontend, machine learning model, and database.
 
@@ -128,7 +130,8 @@ FastAPI
 Uvicorn
 Pandas
 Joblib
-Machine Learning Layer
+
+##Machine Learning Layer
 
 The machine learning layer contains the trained classification pipeline used to generate diabetes predictions.
 
@@ -136,7 +139,8 @@ Technology:
 
 Scikit-learn
 Random Forest
-Database Layer
+
+##Database Layer
 
 The database layer stores prediction records generated through the application.
 
@@ -182,7 +186,7 @@ Example response:
 
 The frontend converts the probability value into a percentage for display.
 
-Model Evaluation
+##Model Evaluation
 
 The initial Random Forest model achieved approximately:
 
@@ -205,7 +209,7 @@ The baseline model was therefore retained as the selected model for the current 
 
 Multiple evaluation metrics were considered instead of relying only on accuracy, since the application involves a medical prediction task where different types of classification errors can have different consequences.
 
-Frontend
+##Frontend
 
 The frontend provides the complete user-facing assessment experience.
 
@@ -237,7 +241,7 @@ Age
 
 The frontend validates the entered values before sending the request to the backend.
 
-Prediction Result
+##Prediction Result
 
 After a successful prediction, the application displays:
 
@@ -249,7 +253,7 @@ Option to start a new assessment
 
 The displayed probability represents the model's estimated probability for the positive class. It should not be interpreted as a medical diagnosis.
 
-Prediction History
+##Prediction History
 
 The application maintains a history of previously generated predictions.
 
@@ -268,7 +272,7 @@ Timestamp
 
 The most recent assessment is displayed first.
 
-Backend API
+##Backend API
 
 The FastAPI backend exposes REST endpoints for communication with the frontend.
 
@@ -310,7 +314,7 @@ Retrieves previously generated prediction records from the database.
 
 The endpoint returns stored assessment data along with the prediction, probability, and creation timestamp.
 
-API Documentation
+##API Documentation
 
 FastAPI automatically provides interactive API documentation through Swagger UI.
 
@@ -320,7 +324,7 @@ During development, the API documentation can be accessed at:
 
 The Swagger interface allows API endpoints to be tested directly without using the frontend.
 
-Database Design
+##Database Design
 
 The application uses SQLAlchemy as the ORM layer over SQLite.
 
@@ -342,7 +346,8 @@ created_at	Prediction creation timestamp
 
 The database allows prediction history to persist beyond the current frontend session.
 
-Project Structure
+##Project Structure
+
 diabetes_full/
 │
 ├── diabetes_backend/
@@ -370,7 +375,8 @@ diabetes_full/
 │
 ├── .gitignore
 └── README.md
-Frontend API Integration
+
+##Frontend API Integration
 
 The frontend communicates with the FastAPI backend through a dedicated API service.
 
@@ -418,7 +424,7 @@ Prediction history loading failures
 
 This prevents backend failures from being incorrectly displayed as successful predictions.
 
-Environment Configuration
+##Environment Configuration
 
 The frontend uses an environment variable to configure the backend API URL.
 
@@ -430,7 +436,7 @@ For deployment, this value should be changed to the URL of the deployed backend.
 
 The actual .env file is excluded from the Git repository, while .env.example is included to document the required configuration.
 
-Local Development
+##Local Development
 Prerequisites
 
 Make sure the following are installed:
@@ -497,7 +503,7 @@ FastAPI Backend
 
 For production deployment, the frontend environment variable should point to the deployed backend:
 
-VITE_API_URL=<DEPLOYED_BACKEND_URL>
+VITE_API_URL=https://diabetes-prediction-system-fullstack.onrender.com/
 
 The backend must also be configured to allow requests from the deployed frontend origin through CORS.
 
@@ -582,7 +588,7 @@ Full-stack application architecture
 
 The primary goal is to move beyond a standalone machine learning notebook and demonstrate how a trained machine learning model can be integrated into an interactive software application.
 
-Disclaimer
+##Disclaimer
 
 This application is developed for educational and machine learning demonstration purposes.
 
